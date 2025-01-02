@@ -1,0 +1,36 @@
+.container {
+    max-width: 100%;
+    background: #FCFAF6;
+    padding: 20px;
+}
+
+.heading {
+    font-family: GT Super Display;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.title {
+    font-family: TWK Lausanne;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+}
+
+.info {
+    font-family: TWK Lausanne;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 27px;
+    text-align: left;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 767px) {
+    .justify-content-center {
+        justify-content: normal;
+    }
+}

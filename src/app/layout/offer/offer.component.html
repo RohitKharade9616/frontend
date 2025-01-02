@@ -1,0 +1,86 @@
+<div class="offer">
+    <h2 class="heading">Member offer: FREE Bottle for Life & cloth</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <!-- Carousel indicators using ngFor -->
+                <div class="carousel-indicators">
+                    <button *ngFor="let img of offerDetails[selectedPanelIndex].images; let i = index" type="button"
+                        [attr.data-bs-target]="'#carouselExampleIndicators'" [attr.data-bs-slide-to]="i"
+                        [class.active]="i === 0" [attr.aria-current]="i === 0 ? 'true' : null"
+                        aria-label="'Slide ' + (i + 1)">
+                    </button>
+                </div>
+
+                <!-- Carousel inner items using ngFor -->
+                <div class="carousel-inner">
+                    <div *ngFor="let img of offerDetails[selectedPanelIndex].images; let i = index" class="carousel-item" [class.active]="i === 0">
+                        <img [src]="img" class="d-block w-100" alt="Carousel image {{ i + 1 }}">
+                    </div>
+                </div>
+
+                <!-- Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div id="offer-title">
+                Christmas Member Offer
+            </div>
+            <div id="offer-subtitle">
+                FREE new-look bottle & cloth with all Christmas Scent Bundles
+            </div>
+            <div style="display: inline-block;">
+                <!-- <div class="reviewHeading">{{review.title}}</div> -->
+                <span class="rating-star" *ngFor="let num of [1, 2, 3, 4, 5]">
+                    <img height="15px" width="15px" class=""
+                        [src]="num <= 5 ? '../../../assets/star.png' : '../../../assets/star.png'">
+                </span>
+                36.6K verified 5-star reviews
+            </div>
+            <div id="offer-para">
+                Buy more, save more on one-time gifting bundles:
+            </div>
+            <mat-expansion-panel *ngFor="let data of offerDetails; let i = index" [expanded]="selectedPanelIndex === i"
+                (opened)="onPanelToggle(i)" class="col-md-10" style="margin-top: 10px;">
+
+                <mat-expansion-panel-header>
+                    <mat-radio-button [(ngModel)]="selectedPanelIndex" [value]="i"
+                        aria-label="Open Panel"></mat-radio-button>
+                    <div class="col-6">{{data.header}}</div>
+                    <div class="col-4">
+                        <span class="mrp">{{data.mrp}}</span>
+                        <span class="discount-price">{{data.dicountPrice}}</span>
+                    </div>
+                </mat-expansion-panel-header>
+
+                <mat-list role="list" *ngFor="let item of data.details">
+                    <mat-list-item role="listitem">
+                        <img src="../../../assets/check.png" alt="" width="10px" height="10px">
+                        &nbsp; {{item}}
+                    </mat-list-item>
+                </mat-list>
+            </mat-expansion-panel>
+
+            <div class="col-md-10 ">
+                <!-- Display the selected price dynamically -->
+                <button mat-raised-button color="primary" class="cart">
+                    ADD TO CART | &nbsp;<span class="mrp"> {{offerDetails[selectedPanelIndex]?.mrp || '0'}}</span><span
+                        class="discount-price"> {{offerDetails[selectedPanelIndex]?.dicountPrice || '0'}}</span>
+                </button>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

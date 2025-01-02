@@ -1,0 +1,76 @@
+.heading
+{
+font-family: GT Super Display;
+font-size: 40px;
+font-weight: 400;
+line-height: 50px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+.offer
+{
+    padding: 20px;
+    background: #E7EBEA;
+
+}
+.rating-star
+{
+    padding: 2px
+}
+#offer-title{
+font-family: TWK Lausanne;
+font-size: 24px;
+font-weight: 600;
+line-height: 30px;
+}
+#offer-subtitle
+{
+font-family: TWK Lausanne;
+font-size: 16px;
+font-weight: 200;
+line-height: 24px;
+
+}
+#offer-para
+{
+font-family: TWK Lausanne;
+font-size: 16px;
+line-height: 25.6px;
+margin-top: 2px;
+
+}
+.mrp
+{
+    font-family: TWK Lausanne;
+font-size: 12px;
+font-weight: 400;
+line-height: 25.6px;
+text-align: left;
+text-decoration:line-through;
+}
+.discount-price
+{
+font-family: TWK Lausanne;
+font-size: 16px;
+font-weight: 600;
+line-height: 25.6px;
+margin-left: 5px;
+
+
+}
+.cart
+{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #11322C;
+    color: #ffff;
+
+}
+@media only screen and (min-width: 350px) and (max-width: 767px) {
+    .heading{
+        font-size: 20px !important;
+        line-height: normal !important;
+    }
+}

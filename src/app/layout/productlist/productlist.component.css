@@ -1,0 +1,77 @@
+.productList
+{
+    margin-top: 20px;
+    padding: 30px;
+}
+.label 
+{
+text-align: center;
+font-family: GT Super Display;
+font-size: 40px;
+font-weight: 400;
+}
+.para
+{
+    text-align: center;
+font-family: TWK Lausanne;
+font-size: 18px;
+font-weight: 200;
+}
+.card
+{
+    margin-left: 5%;
+}
+.rating-star
+{
+    padding: 2px
+}
+.mrp
+{
+    font-family: TWK Lausanne;
+font-size: 12px;
+font-weight: 400;
+line-height: 25.6px;
+text-align: left;
+text-decoration:line-through;
+}
+.discount-price
+{
+font-family: TWK Lausanne;
+font-size: 16px;
+font-weight: 600;
+line-height: 25.6px;
+margin-left: 5px;
+}
+.cart
+{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #11322C;
+    color: #ffff;
+}
+.productName
+{
+    height: 40px;
+}
+.review
+{
+    font-size: 12px;
+}
+@media only screen and (min-width: 350px) and (max-width: 767px) {
+    .label{
+        font-size: 20px !important;
+        line-height: normal !important;
+    }
+    .para{
+        font-size: 12px !important;
+    }
+    .mat-card-image
+    {
+        height: 200px !important;
+    }
+    .mat-card
+    {
+        margin-top: 10px;
+    }
+}

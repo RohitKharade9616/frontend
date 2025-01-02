@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="heading">Enjoy member benefits</div>
+  <div class="row justify-content-center"> 
+    <mat-expansion-panel class="col-md-8" style="margin-top: 10px" *ngFor="let data of faq_data">
+      <mat-expansion-panel-header class="title">
+        {{data.title}}
+      </mat-expansion-panel-header>
+      <span class="info">{{data.para}}</span>
+    </mat-expansion-panel>
+  </div>
+</div>

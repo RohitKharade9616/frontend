@@ -1,0 +1,14 @@
+.banner-img {
+    background-repeat: no-repeat;
+    height: 656px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 767px) {
+    .banner-img {
+        height: auto !important;
+    }
+    .heading{
+        font-size: 20px !important;
+    }
+}

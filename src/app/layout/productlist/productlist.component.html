@@ -1,0 +1,29 @@
+<div class="productList">
+  <h2 class="label" *ngIf="isDesktop">Need anything else?</h2>
+  <h2 class="label" *ngIf="isMobile">Need more refills?</h2>
+  <p class="para">Stock up for Christmas with festive offers just for members</p> 
+  <div class="row">
+    <mat-card appearance="outlined" *ngFor="let product of productData" class="col-md-2 card">
+        <img mat-card-image [src]="product.img" alt="Photo of a Shiba Inu">
+        <div class="productName">
+            {{product.name}}
+          </div>
+          <div style="display: inline-block;">
+            <!-- <div class="reviewHeading">{{review.title}}</div> -->
+            <span class="rating-star" *ngFor="let num of [1, 2, 3, 4, 5]">
+                <img height="15px" width="15px" class=""
+                    [src]="num <= 5 ? '../../../assets/star.png' : '../../../assets/star.png'">
+            </span>
+           <span class="review">{{product.reviews}} Reviews</span>
+        </div>
+        <div>
+            <span class="discount-price">{{product.discountPrice}}</span>&nbsp;&nbsp;
+            <span class="mrp">{{product.mrp}}</span>
+        </div>
+        <button mat-raised-button color="primary" class="cart col-md-2">
+            ADD TO CART
+        </button>
+      </mat-card>
+  </div>
+</div>
+
